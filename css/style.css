@@ -1,0 +1,166 @@
+body {
+	margin:0;
+	font-family: 'Fira Sans', sans-serif;
+}
+
+/* styles the header element where the logo, search bar and the wrapper that surrounds the logo and search bar */
+header {
+	width:100%;
+	height:200px;
+}
+
+/* wraps the logo and search bar in a div so it can be centered in the page */
+.header-wrapper {
+	margin:0 auto;
+	width:50%;
+}
+
+/* centers the logo in the header-wrapper div */
+.logo {
+	margin:50px 0 25px 0;
+	text-align:center;
+}
+
+/* styles the input searchbar */
+input.search-field {
+	width:100%;
+	font-size:18px;
+	outline:none;
+	border:none;
+	text-align:center;
+	color:#242424;
+	padding:10px;
+	border-radius:50px;
+	border:1px solid lightgray;
+}
+
+/* styles the button for the search bar */
+input.search-button {
+	background-color:transparent;
+	outline:none;
+	border:none;
+	padding:10px;
+	border-radius:50px;
+	position:relative;
+	float:right;
+	height:47px;
+	width:47px;
+	top:-47px;
+	background-image:url(../logos/search.png);
+	background-size:25px;
+	background-position:center;
+	background-repeat:no-repeat;
+}
+
+/* styles part of the list element (the news stories) */
+li {
+	margin-bottom:10px;
+	box-sizing:border-box;
+	border-radius:10px;
+}
+
+/* provides padding for each of the columns */
+#mail, #guardian, #bbc {
+	padding:5px;
+}
+
+/* colours the list element background for the daily mail */
+#mail li {
+	background-color:#000;
+}
+
+/* colours the list element background for the bbc */
+#bbc li {
+	background-color:#900d0c;
+}
+
+/* colours the list element background for the the guardian */
+#guardian li {
+	background-color:#00568e;
+}
+
+/* styles the columns for each news source */
+ul.posts {   
+	padding:0;
+    width: 33.33%;
+	float:left;
+    box-sizing: border-box;
+	list-style-type:none;
+	margin:0;
+	vertical-align:top;
+}
+
+/* styles the columns for each news source */
+ul.posts {   
+	padding:0;
+    width: 33.33%;
+	float:left;
+    box-sizing: border-box;
+	list-style-type:none;
+}
+
+/* styles the links (which are the titles) of each news article */
+a {
+	font-size:14px;
+	font-family:"Fira Sans";
+	color:#242424;
+	text-decoration:none;
+	font-weight:600;
+	color:#FFF;
+}
+
+/* wraps ul elements */
+
+.content-wrapper {
+	overflow:auto;
+	width:100%;
+}
+
+/* allows there to be space between the edges of the article and the link title */
+.a-wrapper {
+	padding:5px;
+}
+
+/* styles the images in each post */
+ul.posts li img 
+{
+    max-width: 100%;
+	border-radius:10px 10px 0 0;
+}
+
+.logo-wrapper {
+    width:100%;
+    padding:0;
+    margin:0;
+    display:inline-block;
+    float:left;
+}
+
+#guardian-logo {
+	width:33%;
+	display:inline-block;
+	text-align:center;
+	
+}
+
+#mail-logo {
+	width:33%;
+	display:inline-block;
+	text-align:center;
+}
+#bbc-logo {
+	width:33%;
+	display:inline-block;
+	text-align:center;
+}
+
+#guardian-logo img {
+	width:400px;
+}
+
+#mail-logo img {
+	width:400px;
+}
+#bbc-logo img {
+	width:400px;
+}

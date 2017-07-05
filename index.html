@@ -1,0 +1,105 @@
+<html>
+	<head>
+		<title>BroadBulletin</title>
+
+        <link href="css/normalize.css" rel="stylesheet">
+		<link href="css/style.css" rel="stylesheet">
+        
+        <link href='https://fonts.googleapis.com/css?family=Fira+Sans:400,700italic,700,500italic,500,400italic,300italic,300' rel='stylesheet' type='text/css'>
+        
+	</head>
+	<body>
+        
+        
+        <header>
+        
+        	<div class="header-wrapper" id="header-wrapper">
+        		<div class="logo" id="logo"><img src="logos/logo-idea.png" width="667" height="99"></div>
+                
+                <div class="searchbar-wrapper" id="searchbar-wrapper">
+                
+                		<form id="newsearch" method="get" action="">
+                			<input id="search" class="search-field" name="q" size="21" maxlength="120" placeholder="What's in the news today?" autofocus>
+                			<input type="submit" value="" class="search-button" id="search-button">
+                    	</form>
+                        
+                        </div>
+                     
+        	</div>
+        
+        
+        
+        </header>
+
+        
+        <div id="logo">
+            <img src="">
+        </div>
+        
+        <div class="logo-wrapper" id="logo-wrapper">
+            <div id="guardian-logo"><img src="logos/guardian.svg" id="guardian-logo"></div>
+            <div id="bbc-logo"><img src="logos/bbclogo.svg" id="bbc-logo"></div>
+            <div id="mail-logo"><img src="logos/dailymaillogo.svg" id="mail-logo"></div>
+            
+        </div>    
+            
+        <div id="" class="content-wrapper">
+            <ul class="posts" id="guardian">
+                
+            </ul>
+            
+            
+            <ul class="posts" id="bbc">
+                
+            </ul>
+            
+            <ul class="posts" id="mail">
+                
+            </ul>
+            
+        </div>
+        
+	
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+		<script src="webhose.js"></script>
+
+		
+		<script>
+            
+            $("#search-button").click(function() {
+                $("#mail").empty();
+                $("#bbc").empty();
+                $("#guardian").empty();
+            })
+            
+            setTimeout(function()
+            { 
+            var search = document.getElementById('newsearch');
+            
+                search.addEventListener('submit',function(e) 
+                {
+                    e.preventDefault()
+
+                    // let user know that we're searching
+
+                    var query = document.getElementById('search').value;
+
+                    var titlequery = document.getElementById('search').value;
+
+                    var mail_URL = key + titlequery + title + query + performance + site_mail + type
+                    var bbc_URL = key + titlequery + title + query + performance + site_bbc + type
+                    var guardian_URL = key + titlequery + title + query + performance + site_guardian + type
+
+                    callWebhose(mail_URL, '#mail')
+                    callWebhose(bbc_URL, '#bbc')
+                    callWebhose(guardian_URL, '#guardian')
+
+                    //console.log(URL)
+
+                })
+            }, 2000)                          
+
+        </script>
+        
+	</body>
+</html>
