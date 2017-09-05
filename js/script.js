@@ -24,9 +24,9 @@ function searchForNews(e) {
     const urlArray = new Array;
 
     // create the urls to search for the news
-    const guardianUrl = "http://webhose.io/filterWebContent?token=" + token + "&format=json&sort=crawled&q=" + searchTerm + "%20site_type%3Anews%20site%3Atheguardian.com%20language%3Aenglish%20performance_score%3A%3E5";
-    const bbcUrl = "http://webhose.io/filterWebContent?token=" + token + "&format=json&sort=crawled&q=" + searchTerm + "%20site_type%3Anews%20site%3Abbc.co.uk%20language%3Aenglish%20performance_score%3A%3E5";
-    const telegraphUrl = "http://webhose.io/filterWebContent?token=" + token + "&format=json&sort=crawled&q=" + searchTerm + "%20site_type%3Anews%20site%3Atelegraph.co.uk%20language%3Aenglish%20performance_score%3A%3E5";
+    const guardianUrl = "https://webhose.io/filterWebContent?token=" + token + "&format=json&sort=crawled&q=" + searchTerm + "%20site_type%3Anews%20site%3Atheguardian.com%20language%3Aenglish%20performance_score%3A%3E5";
+    const bbcUrl = "https://webhose.io/filterWebContent?token=" + token + "&format=json&sort=crawled&q=" + searchTerm + "%20site_type%3Anews%20site%3Abbc.co.uk%20language%3Aenglish%20performance_score%3A%3E5";
+    const telegraphUrl = "https://webhose.io/filterWebContent?token=" + token + "&format=json&sort=crawled&q=" + searchTerm + "%20site_type%3Anews%20site%3Atelegraph.co.uk%20language%3Aenglish%20performance_score%3A%3E5";
 
     // push each url in to the array
     urlArray.push(guardianUrl);
