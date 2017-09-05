@@ -1,4 +1,7 @@
 # BroadBulletin
-A small web app that encourages people to break outside their filter bubble and read news from contrasting sources.
 
-I worked on this project in my second year of university for the "Filter Bubbles" unit, where we had to create a small web app that encouraged people to break outside of their filter bubble.
+BroadBulletin is a small web application, designed to make it easier for people to read the same topic of news from different, contrasting sources.
+
+This project was created for the "Filter Bubbles" unit on the BA (Hons) Web Media course at Ravensbourne. The objective for this unit was to create a small web application that helps people "burst" outside of their filter bubble and discover new things.
+
+The API used for this project is the [WebHose API](https://webhose.io).
