@@ -21,6 +21,7 @@ function searchForNews(e) {
     // token
     const token = "d7f07eb3-5135-4d16-b883-9e157c4e3ded";
 
+    // create new array for ajax request
     const urlArray = new Array;
 
     // create the urls to search for the news
@@ -56,7 +57,7 @@ function searchForNews(e) {
     // insert template in to header wrapper element 
     searchTermElement.innerHTML = searchTerm;
 
-    // 
+    // store in dom
     const searchedFor = document.getElementById("searched-for");
 
     searchedFor.classList.remove("hidden");
@@ -114,10 +115,10 @@ function searchForNews(e) {
                     // log to console
                     console.log(title + " | " + source + " | " + articleUrl);
 
-                    var template = '<a class="link" href="' + articleUrl + '"><div class="article">' + 
-                    	'<img class="image" src="' + image + '">' + 
-                    	'<div class="title">' + title + '</div>' +
-	                    '</div></a>';
+                    var template = '<a class="link" href="' + articleUrl + '"><div class="article">' +
+                        '<img class="image" src="' + image + '">' +
+                        '<div class="title">' + title + '</div>' +
+                        '</div></a>';
 
                     // declare element
                     var newsWrapper = document.querySelectorAll(".article-container");
@@ -131,17 +132,24 @@ function searchForNews(e) {
                     // add the fragment to the correct wrapper
                     currentWrapper.appendChild(articleFragment);
 
+                    // remove class from element
                     articleWrapper.classList.remove("hidden");
+
                 }
 
             } else {
                 // We reached our target server, but it returned an error
+
+                alert("There is an error. Please try again.")
+
 
             }
         };
 
         newsReq.onerror = function() {
             // There was a connection error of some sort
+
+            alert("There is an error. Please try again.")
         };
 
         newsReq.send();
